@@ -1,10 +1,6 @@
-/build/
-/build_objs/
 /*.a
 /*.so
 /app
-rules.ninja
-build.ninja
 CMakeFiles/
 CMakeCache.txt
 
