@@ -9,16 +9,14 @@ set(SRC_FILES
     src/main.c
 )
 
-# бібліотека (можна вибирати STATIC або SHARED)
+# бібліотека
 add_library(calc STATIC src/math.c)
-# Якщо хочеш shared, використай:
-# add_library(calc SHARED src/math.c)
 
 # Створити виконуваний файл, який лінкується з бібліотекою
 add_executable(app src/main.c)
 target_link_libraries(app PRIVATE calc)
 
-# Невелика опція для позиційно-незалежного коду для shared lib
+# Опція для shared lib
 set_target_properties(calc PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 # Політики і помітні установки
